@@ -1,0 +1,70 @@
+@use "../abstracts";
+.slideshow {
+  --color: #fff;
+  position: relative;
+  &__inner {
+    display: flex;
+    overflow: hidden;
+  }
+  &__item {
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+    padding-top: 34%;
+    @include abstracts.screen(md) {
+      padding-top: 50%;
+    }
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  &__page {
+    position: absolute;
+    bottom: 17.7%;
+    left: 4.8%;
+    display: flex;
+    align-items: center;
+    column-gap: 31px;
+    width: 16%;
+  }
+  &__num {
+    color: var(--color);
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.44;
+  }
+  &__slider {
+    width: 100%;
+    height: 4px;
+    background: var(--color);
+    flex-shrink: 0;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      translate: 0 -50%;
+      width: 14px;
+      height: 14px;
+      border: 4px solid var(--color);
+      border-radius: 50%;
+      @include abstracts.screen(md) {
+        border-width: 3px;
+      }
+    }
+    &::before {
+      left: 0;
+      translate: 195% -50%;
+    }
+    &::after {
+      right: 0;
+      translate: 386% -50%;
+    }
+  }
+}
