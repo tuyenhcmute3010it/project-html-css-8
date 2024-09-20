@@ -5,6 +5,9 @@
   @supports (-webkit-touch-callout: none) {
     min-height: -webkit-fill-available;
   }
+  &__message {
+    margin-top: 60px;
+  }
   &__intro,
   &__content {
     flex: 1;
@@ -19,6 +22,7 @@
     background-color: var(--auth-intro-bg);
     gap: 50px;
     &-text {
+      color: var(--auth-intro-text-color);
       max-width: 412px;
       font-size: 1.8rem;
       font-weight: 500;
@@ -30,6 +34,7 @@
     }
     &-img {
       max-width: 100%;
+      width: var(--width);
     }
     &-logo {
       position: absolute;
@@ -83,6 +88,7 @@
     font-weight: 500;
     line-height: 1.46;
     margin-top: 50px;
+    color: var(--auth-heading-color);
     @include abstracts.screen(md) {
       font-size: 2.2rem;
       margin-top: 40px;
@@ -102,6 +108,9 @@
   &__form {
     margin-top: 30px;
     width: 100%;
+    &-forgot {
+      margin-top: 10px;
+    }
   }
   &__link {
     color: #0071dc;

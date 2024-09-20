@@ -1,6 +1,9 @@
 @use "../abstracts";
 
 .footer {
+  &__logo {
+    margin-left: 0 !important;
+  }
   &-bottom {
     display: flex;
     align-items: center;
@@ -35,6 +38,9 @@
   }
   &__inner {
     padding-top: 100px;
+    @include abstracts.screen(md) {
+      padding-top: 50px;
+    }
   }
   &-media {
     &__desc {

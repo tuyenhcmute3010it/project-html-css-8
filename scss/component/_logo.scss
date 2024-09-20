@@ -14,6 +14,10 @@
   @include abstracts.screen(md) {
     margin-left: 0;
   }
+  @include abstracts.screen(xl) {
+    // margin-left: 0;
+    margin-left: 30px;
+  }
   &__title {
     font-size: 2.2rem;
     font-weight: 700;

@@ -1,0 +1,522 @@
+@use "../abstracts";
+.checkout-content {
+  &__heading {
+    color: var(--checkout-content-heading);
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.44;
+    margin-bottom: 30px;
+  }
+  margin-top: 30px;
+}
+.checkout-page {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 33px;
+  &__breadcrumbs {
+    background-color: var(--checkout-page-bg);
+  }
+}
+.checkout-container {
+  margin-top: 30px;
+  @include abstracts.screen(md) {
+    margin-top: 20px;
+  }
+}
+.cart-info + .cart-info {
+  margin-top: 30px;
+}
+.cart-info {
+  &__checkbox {
+    &-input {
+      appearance: none; // de xet lai thuoc tinh ban dau , loai bo css mac dinh
+
+      &::before {
+        content: url("../icon/checkbox-uncheck.svg");
+      }
+      &:not(:checked)::before {
+        filter: var(--checkout-checkbox-color);
+      }
+      &:checked::before {
+        content: url("../icon/checkbox-check.svg");
+      }
+    }
+  }
+
+  padding: 30px;
+  border-radius: 20px;
+  background: var(--cart-info-bg);
+  box-shadow: 0px 20px 60px 10px var(--profile-sidebar-shadow);
+  &__heading {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.41;
+    &--level-2 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      line-height: 1.45;
+    }
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  &__bottom {
+    margin-top: 30px;
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--cart-item-title-color);
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.44;
+    margin-top: 10px;
+    &--bold {
+      font-size: 2.2rem;
+      font-weight: 700;
+    }
+    &--block {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+      @include abstracts.screen(sm) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+  &__separate {
+    height: 1px;
+    background: #d2d1d6;
+    margin: 30px 0;
+  }
+  &__continue {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    color: var(--cart-item-title-color);
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.44;
+    gap: 10px;
+    &-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    &-link-icon {
+      rotate: 90deg;
+      display: inline-block;
+      filter: var(--checkout-filter-icon);
+    }
+  }
+  &__sub-label {
+    font-weight: 400;
+  }
+  &__btn {
+    margin-top: 30px;
+  }
+  &__sub-heading {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.44;
+    margin: 30px 0;
+  }
+  &__edit-btn {
+    gap: 10px;
+    display: flex;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.44;
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  &__desc {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.46;
+    margin-top: 6px;
+  }
+  &__form {
+    margin-bottom: 30px;
+  }
+  &__row {
+    flex-direction: row;
+    gap: 20px;
+  }
+  &__check-all {
+    margin: 30px 0;
+  }
+  &__back-arrow {
+    width: 18px;
+  }
+}
+// end cart info
+.cart-item {
+  display: flex;
+  align-items: center;
+  @include abstracts.screen(md) {
+    align-items: start;
+  }
+  border-bottom: 1px solid var(--card-item-border-color);
+  padding: 9px 0 30px;
+  &__thumb-wrap {
+    position: relative;
+    padding-top: 100%;
+    width: 175px;
+    @include abstracts.screen(xxl) {
+      width: 150px;
+    }
+    @include abstracts.screen(sm) {
+      width: 60px;
+      margin-right: 10px;
+    }
+  }
+  &__thumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin: 0 30px 0 20px;
+    @include abstracts.screen(sm) {
+      margin: 0 16px 0 16px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    width: 100%;
+    &--left {
+      width: min(374px, 100%);
+      @include abstracts.screen(lg) {
+        width: 250px;
+      }
+      @include abstracts.screen(md) {
+        width: 374px;
+      }
+      @include abstracts.screen(sm) {
+        width: 100%;
+      }
+    }
+    &--right {
+      margin-left: auto;
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @include abstracts.screen(md) {
+        margin-left: 0;
+        text-align: left;
+      }
+    }
+    @include abstracts.screen(md) {
+      flex-direction: column;
+      text-align: left;
+    }
+  }
+
+  &__title > a {
+    color: var(--cart-item-title-color);
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.44;
+    @include abstracts.screen(sm) {
+      font-size: 1.6rem;
+    }
+  }
+  &__title {
+    @include abstracts.screen(md) {
+      width: min(233px, 100%);
+    }
+  }
+  &__price-wrap {
+    margin-top: 16px;
+    display: flex;
+    color: var(--cart-item-title-color);
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.44;
+  }
+  &__status {
+    color: #67b044;
+    margin-left: 10px;
+  }
+  &__control {
+    margin-top: 16px;
+    display: flex;
+    gap: 20px;
+    &--right {
+      display: flex;
+      gap: 30px;
+      margin-top: 0;
+      padding: 0;
+      &-center {
+        margin-bottom: -25px;
+      }
+    }
+    @include abstracts.screen(md) {
+      margin-left: 0;
+      &--md-block {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+    &-wrap {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      @include abstracts.screen(lg) {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 0;
+      }
+    }
+  }
+  &__select {
+    padding: 11px 20px;
+    border-radius: 10px;
+    border: 1px solid var(--cart-item-select-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--cart-item-title-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.46;
+    height: 44px;
+    width: 137px;
+  }
+  &__select + &__select {
+    width: 118px;
+  }
+  &__btn {
+    &-icon {
+      display: block;
+    }
+    width: min(201px, 100%);
+  }
+
+  &__total-price {
+    color: var(--cart-item-title-color);
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.45;
+    @include abstracts.screen(md) {
+      margin-top: 16px;
+    }
+    @include abstracts.screen(sm) {
+      font-size: 1.8rem;
+    }
+  }
+  &__ctrl-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 15px;
+    &-icon {
+      filter: var(--checkout-filter-icon);
+    }
+  }
+  &__btn-icon {
+    filter: var(--checkout-filter-icon);
+  }
+  &__btn-checkout {
+    width: min(201px, 100%);
+  }
+  &__checkout-btn {
+    @include abstracts.screen(md) {
+      margin-top: 16px;
+    }
+  }
+}
+.gift-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  &__title {
+    color: var(--cart-item-title-color);
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.44;
+  }
+  &__desc {
+    color: var(--cart-item-title-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.42;
+    margin-top: 10px;
+  }
+  &__icon-wrap {
+    width: 76px;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 14px;
+    background: var(--gift-item-icon-wrap-bg);
+    box-shadow: 0px 20px 60px 10px var(--gift-item-icon-wrap-shadow);
+  }
+}
+//
+.user-address {
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    @include abstracts.screen(md) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  &__btn {
+    @include abstracts.screen(md) {
+      height: 46px;
+    }
+  }
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.44;
+  }
+  &__desc {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.46;
+    margin-top: 4px;
+  }
+  &__message {
+    margin-top: 30px;
+    font-weight: 500;
+  }
+  &__link {
+    color: #0071dc;
+  }
+}
+.address-card {
+  display: flex;
+  margin-top: 30px;
+  gap: 16px;
+
+  &__left {
+    flex: 1;
+    display: flex;
+    gap: 18.75px;
+  }
+  @include abstracts.screen(md) {
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.44;
+  }
+  &__desc {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.46;
+    margin-top: 4px;
+    width: min(520px, 90%);
+  }
+  &__list {
+    display: flex;
+    margin-top: 20px;
+    gap: 30px;
+    list-style: disc inside;
+    @include abstracts.screen(sm) {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  &__item {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.42;
+    margin-left: 8px;
+    white-space: nowrap;
+  }
+  &__ctrl {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+}
+.payment-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 20px;
+  background: var(--payment-item-bg);
+  &--pointer {
+    cursor: pointer;
+  }
+  &__content {
+    flex: 1;
+  }
+  &--top {
+    display: block;
+  }
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.44;
+  }
+  &__desc {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.46;
+    margin-top: 4px;
+    &--low {
+      color: #9e9da8;
+    }
+  }
+
+  &__detail {
+    color: #0071dc;
+  }
+  &__thumb {
+    width: 70px;
+    height: 54px;
+    object-fit: cover;
+  }
+  &__cost {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.44;
+    color: #9e9da8;
+  }
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 14px;
+    &-input:checked + .payment-item__cost {
+      color: inherit;
+    }
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include abstracts.screen(sm) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+  }
+}

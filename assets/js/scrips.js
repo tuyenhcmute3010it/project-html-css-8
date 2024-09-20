@@ -188,3 +188,43 @@ window.addEventListener("template-loaded", () => {
     };
   });
 });
+// //////////////////
+window.addEventListener("template-loaded", () => {
+  const tabsSelector = "prod-tab__item";
+  const contentsSelector = "prod-tab__content";
+
+  const tabActive = `${tabsSelector}--active`;
+  const contentActive = `${contentsSelector}--active`;
+
+  const tabContainers = $$(".js-tabs");
+  tabContainers.forEach((tabContainer) => {
+    const tabs = tabContainer.querySelectorAll(`.${tabsSelector}`);
+    const contents = tabContainer.querySelectorAll(`.${contentsSelector}`);
+    tabs.forEach((tab, index) => {
+      tab.onclick = () => {
+        tabContainer.querySelector(`.${tabActive}`)?.classList.remove(tabActive);
+        tabContainer.querySelector(`.${contentActive}`)?.classList.remove(contentActive);
+        tab.classList.add(tabActive);
+        contents[index].classList.add(contentActive);
+      };
+    });
+  });
+});
+//
+
+window.addEventListener("template-loaded", () => {
+  const switchBtn = document.querySelector("#switch-theme-btn");
+  if (switchBtn) {
+    switchBtn.onclick = function () {
+      const isDark = localStorage.dark === "true";
+      document.querySelector("html").classList.toggle("dark", !isDark);
+      localStorage.setItem("dark", !isDark);
+      switchBtn.querySelector("span").textContent = isDark ? "Dark mode" : "Light mode";
+    };
+    const isDark = localStorage.dark === "true";
+    switchBtn.querySelector("span").textContent = isDark ? "Light mode" : "Dark mode";
+  }
+});
+
+const isDark = localStorage.dark === "true";
+document.querySelector("html").classList.toggle("dark", isDark);

@@ -38,7 +38,7 @@ html {
   // filter form
   --filter-form-bg: #fff;
   --filter-form-shadow: rgba(200, 200, 200, 0.4);
-  --filter-form-tag-bg: #f8f8fb;
+  --form-tag-bg: #f8f8fb;
   --filter-form-label-color: #1a162e;
   --filter-form-select-color: #1a162e;
   // footer
@@ -50,4 +50,69 @@ html {
   @include abstracts.screen(md) {
     --auth-intro-bg: #fff;
   }
+  //Form
+  --form-placeholder-color: #d2d1d6;
+  // product detail
+  --product-detail-bg: #fff;
+  // breadcrumb
+  @include abstracts.screen(md) {
+    --breadcrumb-detail-bg: #fff;
+  }
+  --breadcrumb-detail-bg: #f6f6f6;
+  --breadcrumb-shadow: rgba(237, 237, 246, 0.2);
+  --breadcrumb-link-current-color: #1a162e;
+  // pro-info
+  --prod-info-bg: #f6f6f6;
+  @include abstracts.screen(md) {
+    --product-detail-bg: #fafafd;
+    --prod-info-bg: #fff;
+  }
+  --prod-info-heading-color: #1a162e;
+  --prod-prop-color: #1a162e;
+  --prod-info-color: #000;
+  --prod-info-tag: #ededf6;
+  --prod-info-content: #fff;
+  // search bar
+  --search-bar-bg: #fff;
+  // review - card
+  --review-card-bg: #fafafd;
+  @include abstracts.screen(md) {
+    --review-card-bg: #fff;
+  }
+  --prod-content-heading: #171c28;
+  // text content
+  --text-content-hr-bg: #171c28;
+  // act dropdown
+  --act-dropdown-bg: #fff;
+  --act-dropdown-shadow: rgba(200, 200, 200, 0.4);
+  --act-dropdown-title-color: #1a162e;
+  --act-dropdown-bottom-border: #d2d1d6;
+  // cart-preview-item
+  --cart-preview-item-title-color: #1a162e;
+  --act-dropdown-bold: #1a162e;
+  // cart info
+  --cart-info-bg: #fff;
+  --cart-info-shadow: rgba(237, 237, 246, 0.2);
+  --card-item-border-color: #d2d1d6;
+  --checkout-page-bg: #fff;
+  --cart-info-bg: #fff;
+  --cart-item-title-color: #1a162e;
+  --cart-item-select-border: #d2d1d6;
+  // gift item
+  --gift-item-icon-wrap-bg: rgb(118, 68, 225, 0.1);
+  --gift-item-icon-wrap-shadow: rgba(237, 237, 246, 0.2);
+  // dialog
+  --modal-bg: #fff;
+  --modal-shadow: rgba(237, 237, 246, 0.2);
+  --form-option-hover-bg: #ebebeb;
+  --payment-item-bg: #f6f6f6;
+  // payment new card
+  --payment-new-card-border-color: #d2d1d6;
+  --account-info-bg: #f6f6f6;
+  --account-info-icon-bg: #fff;
+  // profile
+  --profile-sidebar-bg: #fff;
+  --profile-sidebar-shadow: rgba(237, 237, 246, 0.2);
+  // separate
+  --separate-color: #292e39;
 }

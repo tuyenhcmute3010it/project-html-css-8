@@ -1,0 +1,98 @@
+.payment-card {
+  position: relative;
+  background: var(--bg-color);
+  height: 100%;
+  padding: 20px;
+  color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 1;
+  &__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+  &__top {
+    display: flex;
+    gap: 6px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.42;
+  }
+  &__type {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.42;
+  }
+  &__number {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.44;
+    margin-top: 37px;
+  }
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  &__label {
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1.75;
+  }
+  &__value {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  &__exprise {
+    margin: 0 auto 0 30px;
+  }
+  &__circle {
+    --circle-width: 28px;
+    width: 42px;
+    height: 28px;
+    position: relative;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: var(--circle-width);
+      height: var(--circle-width);
+      border-radius: 50%;
+      top: 0;
+    }
+    &::before {
+      left: 0;
+      background-color: #f94545;
+      z-index: 1;
+      mix-blend-mode: hard-light;
+    }
+    &::after {
+      right: 0;
+      background-color: #ffb700;
+    }
+  }
+}
+.new-card {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 170px;
+  gap: 14px;
+  &__text {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.42;
+  }
+  border-radius: 10px;
+  border: 1px dashed var(--payment-new-card-border-color);
+}

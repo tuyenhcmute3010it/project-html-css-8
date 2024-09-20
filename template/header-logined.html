@@ -3,22 +3,19 @@
     <button class="top-bar__more icon d-none d-lg-block js-toggle" toggle-target="#navbar">
       <img src="./assets/icon/more.svg" alt="" class="top-bar__more" />
     </button>
-
-
     <!-- logo -->
     <a href="./" class="logo">
       <img src="./assets/icon/logo.svg" alt="grocerymart" class="logo__img" />
       <h1 class="logo__title">grocerymart</h1>
     </a>
-
     <!-- navbar -->
     <nav id="navbar" class="navbar hide">
       <button class="navbar__close--btn js-toggle icon" toggle-target="#navbar">
         <img src="../assets/icon/arrow-left.svg" alt="" class="arrow-left">
       </button>
-      <a href="" class="nav-btn d-none d-md-flex">
+      <a href="./checkout.html" class="nav-btn d-none d-md-flex">
         <img src="../assets/icon/buy.svg" alt="" class="nav-btn__icon icon">
-        <span class="nav-btn__title">Card</span>
+        <span class="nav-btn__title">Cart</span>
         <span class="nav-btn__qnt">3</span>
       </a>
       <a href="" class="nav-btn d-none d-md-flex">
@@ -5269,6 +5266,8 @@
         </button>
       </div>
       <div class="top-act__group d-md-none">
+      <div class="top-act__btn-wrap">
+
         <button class="top-act__btn">
           <img
             src="./assets/icon/heart.svg"
@@ -5277,15 +5276,187 @@
           />
           <span class="top-act__title">03</span>
         </button>
+        <!-- dropdown liked -->
+        <div class="act-dropdown">
+          <div class="act-dropdown__arrow icon">
+            <img src="./assets/img/drop-down.png" alt="" class="act-dropdown__arrow-img ">
+          </div>
+          <div class="act-dropdown__inner">
+          <div class="act-dropdown-top">
+              <h2 class="act-dropdown__title">
+                You have 3 item(s)
+              </h2>
+              <a href="./favourite.html" class="act-dropdown__view-all">See All</a>
+            </div>
+            <div class="row row-cols-3 act-dropdown__list">
+              <!-- cart preview item 1 -->
+              <div class="col">
+                <article class="cart-preview-item">
+                  <div class="cart-preview-item__img-wrap">     
+                    <img src="./assets/img/product/item-1.png" alt="" class="cart-preview-item__thumb">
+                  </div>
+             
+                  <h3 class="cart-preview-item__title">Lavazza Coffee Blends </h3>
+                  <p class="cart-preview-item__price">$329.00</p>
+                </article>
+              </div>
+              <!-- cart preview item 2 -->
+              <div class="col">
+                <article class="cart-preview-item">
+                  <div class="cart-preview-item__img-wrap">     
+                    <img src="./assets/img/product/item-2.png" alt="" class="cart-preview-item__thumb">
+                  </div>
+                  <h3 class="cart-preview-item__title">Coffee Beans Espresso</h3>
+                  <p class="cart-preview-item__price">$39.99</p>
+                </article>
+              </div>
+              <!-- cart preview item 3 -->
+              <div class="col">
+                <article class="cart-preview-item">
+                  <div class="cart-preview-item__img-wrap">     
+                    <img src="./assets/img/product/item-2.png" alt="" class="cart-preview-item__thumb">
+                  </div>
+                  <h3 class="cart-preview-item__title">Qualità Oro Mountain</h3>
+                  <p class="cart-preview-item__price">$47.00</p>
+                </article>
+              </div>
+            </div>
+           <div class="act-dropdown__separate"></div>
+            <div class="act-dropdown__checkout">
+              <a href="./checkout.html" class="btn btn--primary btn--rounded act-dropdown__checkout-btn">Check Out All</a>
+            </div>
+          </div>
+         </div>
+      </div>
         <div class="top-act__separate"></div>
 
-        <button class="top-act__btn">
-          <img src="./assets/icon/buy.svg" alt="" class="icon top-act__icon" />
-          <span class="top-act__title">$65.42</span>
-        </button>
+      <div class="top-act__btn-wrap">
+          <button class="top-act__btn">
+            <img src="./assets/icon/buy.svg" alt="" class="icon top-act__icon" />
+            <span class="top-act__title">$65.42</span>
+            <!-- dropdown -->
+             <!--  -->
+          </button>
+          <!-- shop dropdown -->
+          <div class="act-dropdown">
+            <div class="act-dropdown__arrow icon">
+              <img src="./assets/img/drop-down.png" alt="" class="act-dropdown__arrow-img ">
+            </div>
+            <div class="act-dropdown__inner">
+            <div class="act-dropdown-top">
+                <h2 class="act-dropdown__title">
+                  You have 3 item(s)
+                </h2>
+                <a href="./checkout.html" class="act-dropdown__view-all">See All</a>
+              </div>
+              <div class="row row-cols-3 act-dropdown__list">
+                <!-- cart preview item 1 -->
+                <div class="col">
+                  <article class="cart-preview-item">
+                    <div class="cart-preview-item__img-wrap">     
+                      <img src="./assets/img/product/item-1.png" alt="" class="cart-preview-item__thumb">
+                    </div>
+               
+                    <h3 class="cart-preview-item__title">Lavazza Coffee Blends </h3>
+                    <p class="cart-preview-item__price">$329.00</p>
+                  </article>
+                </div>
+                <!-- cart preview item 2 -->
+                <div class="col">
+                  <article class="cart-preview-item">
+                    <div class="cart-preview-item__img-wrap">     
+                      <img src="./assets/img/product/item-2.png" alt="" class="cart-preview-item__thumb">
+                    </div>
+                    <h3 class="cart-preview-item__title">Coffee Beans Espresso</h3>
+                    <p class="cart-preview-item__price">$39.99</p>
+                  </article>
+                </div>
+                <!-- cart preview item 3 -->
+                <div class="col">
+                  <article class="cart-preview-item">
+                    <div class="cart-preview-item__img-wrap">     
+                      <img src="./assets/img/product/item-2.png" alt="" class="cart-preview-item__thumb">
+                    </div>
+                    <h3 class="cart-preview-item__title">Qualità Oro Mountain</h3>
+                    <p class="cart-preview-item__price">$47.00</p>
+                  </article>
+                </div>
+              </div>
+              <div class="act-dropdown__bottom">
+                <div class="act-dropdown__row">
+                  <span class="act-dropdown__label">Subtotal</span>
+                  <span class="act-dropdown__value">$415.99</span>
+                </div>
+                <div class="act-dropdown__row">
+                  <span class="act-dropdown__label">Texes</span>
+                  <span class="act-dropdown__value">Free</span>
+                </div>
+                <div class="act-dropdown__row">
+                  <span class="act-dropdown__label">Shipping</span>
+                  <span class="act-dropdown__value">$10.00</span>
+                </div>
+                <div class="act-dropdown__row">
+                  <span class="act-dropdown__label act-dropdown__label--bold">Total Price:</span>
+                  <span class="act-dropdown__value act-dropdown__value--bold">$425.99</span>
+                </div>
+              </div>
+              <div class="act-dropdown__checkout">
+                <a href="./checkout.html" class="btn btn--primary btn--rounded act-dropdown__checkout-btn">Check Out All</a>
+              </div>
+            </div>
+           </div>
+      </div >
       </div>
-      <div class="top-act__user">
+      <div  class="top-act__user">
         <img src="./assets/img/avatar.jpg" alt="" class="top-act__avatar" />
+        <div class="act-dropdown top-act__dropdown">
+          <div class="act-dropdown__arrow icon top-act__dropdown-arrow">
+            <img src="./assets/img/drop-down.png" alt="" class="act-dropdown__arrow-img ">
+          </div>
+          <div class="act-dropdown__inner top-act__dropdown-inner">
+           <div class="user-menu">
+            <div class="user-menu__top">
+              <img src="./assets/img/avatar.jpg" alt="" class="user-menu__avatar">
+             <div>
+                <p class="user-menu__name">Ricardo Value</p>
+                <p class="user-menu__username">@Ricardo</p>
+             </div>
+            </div>
+            <ul class="user-menu__list">
+              <li>
+                <a href="./profile.html" class="user-menu__link">
+                  <img src="./assets/icon/profile-user.svg" alt="" class="icon user-menu__icon">
+                  Profile
+                </a>
+              </li>
+              <li>
+                <a href="./favourite.html" class="user-menu__link">
+                  <img src="./assets/icon/favourite.svg" alt="" class="icon user-menu__icon">
+                  
+                  List</a>
+              </li>
+              <li class="user-menu__separate">
+                <a href="#!" class="user-menu__link" id="switch-theme-btn">
+                  <img src="../assets/icon/sun.svg" alt="" class="icon user-menu__icon">
+                  
+                 <span> Dark Mode</span></a>
+              </li>
+              <li >
+                <a href="#!" class="user-menu__link">
+                  <img src="../assets/icon/setting.svg" alt="" class="icon user-menu__icon">
+                  
+                  Setting</a>
+              </li>
+              <li class="user-menu__separate">
+                <a href="./sign-in.html" class="user-menu__link">
+                  <img src="../assets/icon/logout.svg" alt="" class="icon user-menu__icon">
+                  
+                  Logout</a>
+              </li>
+            </ul>
+           </div>
+          </div>
+         </div>
       </div>
     </div>
   </div>

@@ -28,63 +28,7 @@
   // filter -form
   &__form {
     margin-top: 30px;
-    &-label {
-      color: var(--filter-form-label-color);
-      font-size: 2.2rem;
-      font-weight: 500;
-      line-height: 1.45;
-      &--small {
-        display: inline-block;
-        margin-bottom: 10px;
-        font-size: 1.4rem;
-        line-height: 1.42;
-      }
-    }
-    &-select-wrap {
-      border-radius: 6px;
-      border: 1px solid #d2d1d6;
-      height: 45px;
-      display: flex;
-      align-items: center;
-    }
-    &-select {
-      color: var(--filter-form-select-color);
-      font-size: 1.4rem;
-      font-weight: 500;
-      line-height: 1.42;
-      padding: 0 14px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      min-width: var(--width, 108px);
-      height: calc(100% - 10px);
-      cursor: pointer;
-      @include abstracts.screen(xl) {
-        flex: 1;
-      }
-    }
-    &-select + &-select {
-      border-left: 1px solid #d2d1d6;
-    }
-    &-tags {
-      display: flex;
-      gap: 10px 20px;
-      align-items: center;
-      flex-wrap: wrap;
-      @include abstracts.screen(sm) {
-        gap: 10px;
-      }
-    }
-    &-tag {
-      border-radius: 6px;
-      background: var(--filter-form-tag-bg);
-      color: #9e9da8;
-      padding: 6px 12px;
-      transition: color 0.25s;
-      &:hover {
-        color: var(--text-color);
-      }
-    }
+
     &-group {
       margin-top: 20px;
       &--inline {

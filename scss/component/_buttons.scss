@@ -48,8 +48,9 @@
       margin-left: 20px;
     }
   }
+
   &--text {
-    color: #9e9da8;
+    // color: #9e9da8;
     background-color: transparent;
   }
   &--primary {
@@ -62,6 +63,10 @@
   }
   &--rounded {
     border-radius: 999px;
+  }
+  &--danger {
+    background-color: rgb(231, 58, 58);
+    color: #fff;
   }
   &[disabled],
   &--disable {

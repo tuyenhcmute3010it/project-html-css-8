@@ -1,0 +1,56 @@
+@use "../abstracts";
+.review-card {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background: var(--review-card-bg);
+  border-radius: 16px;
+  height: max(136px, 100%);
+  @include abstracts.screen(xl) {
+    padding: 10px;
+  }
+
+  &__title {
+    color: inherit;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.41;
+    @include abstracts.screen(lg) {
+      font-size: 1.8rem;
+    }
+  }
+  &__desc {
+    color: inherit;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 10px;
+  }
+  &__content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    @include abstracts.screen(xl) {
+      flex-direction: column;
+      text-align: center;
+    }
+    @include abstracts.screen(lg) {
+      flex-direction: row;
+      font-size: 1.8rem;
+      text-align: start;
+    }
+  }
+  &__rating {
+    margin-top: 20px;
+    gap: 20px;
+    justify-self: flex-end;
+  }
+  &__rating-title {
+    color: inherit;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.44;
+    margin-left: 20px;
+  }
+}
